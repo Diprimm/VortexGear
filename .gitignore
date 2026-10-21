@@ -75,3 +75,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 Assets\Models\spaceship-macross-yf-19/
+
+# Unity Recorder Outputs
+/[Rr]ecordings/
+*.mp4
