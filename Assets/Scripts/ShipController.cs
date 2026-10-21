@@ -138,28 +138,44 @@ public class ShipController : MonoBehaviour
     
     public IEnumerator RollCorroutine(float direction)
     {
+        //To block input movement during roll
         isRolling = true;
 
+        //1 phase duration is 40% of the total duration of the roll
         float rollTime = rollDuration * 0.4f;
         float elapsed = 0f;
         float previousEasedAngle = 0f;
+
         Quaternion originalRotation = shipModel.localRotation;
 
+        // - Phase1 -
         while (elapsed < rollTime)
-        {
+        {         
             elapsed += Time.fixedDeltaTime;
+
+            // "t" represents the progress of time in a normalized value
             float t = Mathf.Clamp01(elapsed / rollTime);
 
             float easedT = rollEasingCurve.Evaluate(t);
             float easedAngle = easedT * rollAngle;
 
+            //"step" is how much is should advance in this specific frame.
+            //Calculated by subtracting the angle already applied in the previous frame
+            //from the current angle.
             float step = easedAngle - previousEasedAngle;
+
+            //Here we apply the rotation calculated.
             shipModel.localRotation *= Quaternion.Euler(0, 0, step * direction);
 
             previousEasedAngle = easedAngle;
             yield return new WaitForFixedUpdate();
         }
 
+
+        // - Phase2 - (Correction. May be optional)
+
+        //If the angle is not multiple of 360 degrees, we secure a smooth transition back to
+        //original rotation.
         if (rollAngle % 360f != 0f)
         {
             Quaternion rotBeforeReturn = shipModel.localRotation;
@@ -172,12 +188,17 @@ public class ShipController : MonoBehaviour
                 elapsed += Time.fixedDeltaTime;
                 t2 = Mathf.Clamp01(elapsed / returnTime);
                 float eased = returnEasingCurve.Evaluate(t2);
+
+                //Interpolation with Slerp between current rotation and original rotation.
                 shipModel.localRotation = Quaternion.Slerp(rotBeforeReturn, originalRotation, eased);
                 yield return new WaitForFixedUpdate();
             }
             shipModel.localRotation = originalRotation;
         }
 
+
+        // - Phase3 -
+        //We clean the rotation
         float remaining = rollAngle - previousEasedAngle;
         shipModel.localRotation *= Quaternion.Euler(0, 0, remaining * direction);
 
