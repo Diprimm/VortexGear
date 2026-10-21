@@ -31,3 +31,15 @@ The greatest engineering challenge during development was implementing the space
 ## 📝 License
 
 This project is licensed under a custom Software and Source Code License Agreement. Commercial use, external project distribution, and asset exploitation are strictly prohibited without prior authorization. Please refer to the full [LICENSE](LICENSE) file for details.
+
+---
+
+## ⚠️ Important Note Regarding 3D Assets
+
+To comply with copyright guidelines and intellectual property restrictions, **the original 3D spaceship model used in development is NOT included in this repository**. 
+
+If you clone or download this project to test or build upon it:
+*   You will need to import your own 3D model or use a Unity primitive (like a capsule or cube) as a placeholder.
+*   Simply assign your custom model to the spaceship's Prefab/GameObject structure, and the physics-driven movement scripts will work seamlessly.
+
+---
