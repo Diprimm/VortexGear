@@ -1,4 +1,4 @@
-# 6DOF Third-Person Spaceship Prototype
+# VortexGear - 6DOF Third-Person Spaceship Prototype
 
 A technical Unity prototype focused on implementing a **6DOF (Six Degrees of Freedom)** third-person spaceship controller. The primary objective of this project was to master Unity's **New Input System** and deliver a high-fidelity **Game Feel** through advanced camera mechanics, post-processing, and physics-driven systems.
 
