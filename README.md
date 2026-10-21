@@ -4,6 +4,11 @@ A technical Unity prototype focused on implementing a **6DOF (Six Degrees of Fre
 
 This project serves as a showcase of core **Gameplay Programming** skills, architecture modularity, and creative problem-solving under physics constraints.
 
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/2013b4a3-88cf-416c-a30e-9ef004d46e39" width="700" autoplay loop muted controls></video>
+</p>
+
 ---
 
 ## 🛠️ Core Technical Features
