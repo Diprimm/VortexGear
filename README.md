@@ -16,7 +16,7 @@ This project serves as a showcase of core **Gameplay Programming** skills, archi
 
 ### 2. High-Fidelity Game Feel & Juice
 *   **Speed Shader:** A custom full-screen shader designed to introduce screen-space procedural lines and distortion to dynamically convey extreme velocity.
-*   **Camera Polish:** Integrated dynamic camera shakes (tailored via code/Cinemachine) coupled with Post-Processing effects like motion to amplify the sensation of acceleration.
+*   **Camera Polish:** Integrated dynamic camera shakes (tailored via code/Cinemachine) coupled with Post-Processing effects like motion blur to amplify the sensation of acceleration.
 
 ---
 
