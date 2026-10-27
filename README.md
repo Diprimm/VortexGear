@@ -30,6 +30,21 @@ The greatest engineering challenge during development was implementing the space
 
 ---
 
+## Requirements for use
+
+### 1. Version
+* This project is developed in Unity version 6.3.
+
+### 2. Controls
+* W: accelerate
+* S: decelerate/move back
+* A: move left
+* D: move right
+* Q: roll left
+* E: roll right
+
+* Mouse: look direction
+
 ## License
 
 This project is licensed under a MIT License Agreement. Please refer to the full [LICENSE](LICENSE) file for details.
