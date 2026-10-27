@@ -8,7 +8,7 @@ This project serves as a showcase of core **Gameplay Programming** skills, archi
 
 ---
 
-## 🛠️ Core Technical Features
+## Core Technical Features
 
 ### 1. Physics-Driven 6DOF Controller
 *   **Rigidbody Architecture:** Spaceship movement is entirely physics-driven, utilizing `Rigidbody.AddForce` and `Rigidbody.AddTorque` to achieve authentic 6DOF control (pitch, yaw, roll, and 3-axis translation).
@@ -20,9 +20,9 @@ This project serves as a showcase of core **Gameplay Programming** skills, archi
 
 ---
 
-## 🧠 Technical Challenges & Solutions
+## Technical Challenges & Solutions
 
-### 🛸 The Evade Mechanic (Dodge/Barrel Roll)
+### The Evade Mechanic (Dodge/Barrel Roll)
 The greatest engineering challenge during development was implementing the spaceship's **Evade / Dodge** ability. This mechanic allows the ship to perform a rapid axial rotation to dodge incoming projectiles and obstacles.
 
 *   **The Problem:** Initial iterations felt extremely rigid and "clunky." The first approach utilized a traditional Unity Keyframe Animation component. However, this was quickly discarded because it lacked **modularity and scalability**: it was impossible to tweak individual values (like speed or rotation arcs) for different spaceship models without creating entirely new animation clips.
@@ -30,7 +30,7 @@ The greatest engineering challenge during development was implementing the space
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under a custom Software and Source Code License Agreement. Commercial use, external project distribution, and asset exploitation are strictly prohibited without prior authorization. Please refer to the full [LICENSE](LICENSE) file for details.
 
