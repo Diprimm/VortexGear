@@ -32,7 +32,7 @@ The greatest engineering challenge during development was implementing the space
 
 ## License
 
-This project is licensed under a custom Software and Source Code License Agreement. Commercial use, external project distribution, and asset exploitation are strictly prohibited without prior authorization. Please refer to the full [LICENSE](LICENSE) file for details.
+This project is licensed under a MIT License Agreement. Please refer to the full [LICENSE](LICENSE) file for details.
 
 ---
 
