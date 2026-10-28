@@ -89,18 +89,19 @@ public class ShipController : MonoBehaviour
         }       
     }
 
+
     public void ShipTranslation()
     {
-        Vector3 forward;
+        Vector3 forward = transform.forward * baseForwardForce;
 
         if (boostInput)
         {
-            forward = transform.forward * boostForce;
+            forward += transform.forward * boostForce;
         }
 
         else
         {
-            forward = transform.forward * moveInput.y * forwardForce;
+            forward += transform.forward * moveInput.y * forwardForce;
         }
 
         
@@ -129,12 +130,6 @@ public class ShipController : MonoBehaviour
 
         StartCoroutine(RollCorroutine(-direction));
     }
-
-    public void DefaultForce()
-    {
-        rb.AddForce(transform.forward * baseForwardForce * Time.fixedDeltaTime, ForceMode.Force);
-    }
-
     
     public IEnumerator RollCorroutine(float direction)
     {
@@ -207,7 +202,6 @@ public class ShipController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        DefaultForce();
         ShipTranslation();
         ShipRotation();
     }
